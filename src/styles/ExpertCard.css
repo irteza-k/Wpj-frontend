@@ -1,0 +1,101 @@
+/* src/styles/ExpertCard.css */
+
+.expert-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+    height: 100%; /* Ensures cards in a grid have consistent height */
+}
+
+.expert-card:hover {
+    transform: translateY(-5px);
+}
+
+.expert-card-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.expert-card-name {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.expert-card-title {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.expert-card-category {
+    font-size: 0.9em;
+    color: #888;
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.expert-card-rating {
+    font-size: 0.9em;
+    color: #ffc107; /* Star color */
+    margin-bottom: 10px;
+}
+
+.expert-card-description {
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows description to take available space */
+    overflow: hidden; /* Hide overflow if description is too long */
+    text-overflow: ellipsis; /* Add ellipsis if hidden */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit description to 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+.expert-card-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.expert-card-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the grids that contain ExpertCards */
+.experts-grid, .experts-grid-listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.expert-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Make the link cover the whole card area for clickability */
+}

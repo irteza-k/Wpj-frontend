@@ -1,0 +1,216 @@
+.expert-profile-main {
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px var(--shadow-medium);
+  overflow: hidden; /* To contain border-radius */
+}
+
+.expert-profile-header-section {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.expert-profile-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header-details h1 {
+  font-size: 38px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.expert-profile-title {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.expert-profile-rating {
+  font-size: 16px;
+  color: var(--star-gold); /* Yellow stars */
+  margin-bottom: 15px;
+}
+
+.expert-profile-rating span {
+    color: white; /* Make text white */
+}
+
+
+.expert-short-description {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  opacity: 0.9;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Tab navigation */
+.expert-profile-body-section {
+  padding: 30px 40px;
+}
+
+.profile-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.profile-tabs button {
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-medium);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.profile-tabs button:hover {
+  color: var(--primary-blue);
+}
+
+.profile-tabs button.active-tab {
+  color: var(--primary-blue);
+  border-bottom-color: var(--primary-blue);
+}
+
+/* Tab content */
+.tab-content {
+  min-height: 200px; /* Ensure some height for content */
+}
+
+.about-expert h3, .expert-services h3, .expert-reviews h3 {
+  font-size: 28px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.about-expert p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 20px;
+}
+
+.expert-category-tag {
+    display: inline-block;
+    background-color: #e6f2ff; /* Light blue tag */
+    color: var(--primary-blue);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+
+/* Services list */
+.service-item {
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.service-item h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.service-item p {
+  font-size: 15px;
+  color: var(--text-medium);
+  margin-bottom: 15px;
+}
+
+.service-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+}
+
+/* Loading state */
+.loading-state {
+  text-align: center;
+  padding: 50px;
+  font-size: 20px;
+  color: var(--text-medium);
+}
+.back-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .expert-profile-main {
+    margin: 20px 10px;
+    border-radius: 8px;
+  }
+  .expert-profile-header-section {
+    padding: 30px 20px;
+  }
+  .header-details h1 {
+    font-size: 32px;
+  }
+  .expert-profile-title {
+    font-size: 16px;
+  }
+  .profile-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .profile-actions .btn {
+    width: 100%;
+  }
+  .expert-profile-body-section {
+    padding: 20px;
+  }
+  .profile-tabs {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .profile-tabs button {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  .about-expert h3, .expert-services h3, .expert-reviews h3 {
+    font-size: 24px;
+  }
+  .service-item {
+    padding: 15px;
+  }
+}

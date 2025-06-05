@@ -1,0 +1,68 @@
+.header {
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #007bff; /* Topmate-like blue */
+}
+
+.auth-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.login-button {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  margin-right: 10px;
+}
+
+.login-button:hover {
+  background-color: #e6f2ff;
+}
+
+.signup-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,263 @@
+.homepage-content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6f2ff; /* Light blue background */
+  border-radius: 15px;
+  padding: 60px;
+  margin-bottom: 60px;
+  gap: 40px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.hero-text {
+  flex: 1.2;
+  min-width: 300px; /* Ensures text area has minimum width */
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  color: var(--text-dark);
+  margin-bottom: 25px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: var(--text-medium);
+  margin-bottom: 35px;
+}
+
+.search-bar-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-bar-container input {
+  flex-grow: 1;
+  padding: 14px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar-container input:focus {
+  border-color: var(--primary-blue);
+}
+
+.popular-categories {
+    font-size: 15px;
+    color: var(--text-medium);
+    margin-top: 15px;
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: #d1e7fd; /* Light blue tag */
+    color: var(--primary-blue);
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px; /* For wrap scenarios */
+}
+
+
+.hero-image {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px; /* Ensures image area has minimum width */
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.featured-experts-section,
+.how-it-works-section,
+.call-to-action-experts {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 42px;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* How it works section */
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.step-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    padding: 30px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+}
+
+.step-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    background-color: #f0f8ff; /* Light background for icon */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0f0ff;
+}
+
+.step-card h3 {
+    font-size: 24px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.step-card p {
+    font-size: 16px;
+    color: var(--text-medium);
+    line-height: 1.7;
+}
+
+/* Call to action for experts */
+.call-to-action-experts {
+    background-color: #dff0d8; /* Light green background */
+    border-radius: 15px;
+    padding: 50px;
+}
+
+.call-to-action-experts h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #28a745; /* Green text */
+}
+
+.call-to-action-experts p {
+    font-size: 20px;
+    color: #4CAF50; /* Slightly darker green */
+    margin-bottom: 30px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 40px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-image {
+        min-width: unset; /* Remove min-width for smaller screens */
+        flex: none; /* Let content dictate width */
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .search-bar-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar-container input,
+    .search-bar-container .btn {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage-content {
+        padding: 0 15px;
+    }
+    .hero-section {
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    .hero-text p {
+        font-size: 16px;
+    }
+    .featured-experts-section,
+    .how-it-works-section,
+    .call-to-action-experts {
+        margin-bottom: 40px;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    .experts-grid {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+        gap: 20px;
+    }
+    .step-card {
+        padding: 20px;
+        min-width: unset;
+    }
+    .step-card h3 {
+        font-size: 20px;
+    }
+    .call-to-action-experts h2 {
+        font-size: 30px;
+    }
+    .call-to-action-experts p {
+        font-size: 18px;
+    }
+}

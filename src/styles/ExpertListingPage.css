@@ -1,0 +1,115 @@
+.expert-listing-main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.listing-hero {
+  background-color: #f0f8ff; /* Lighter blue for listing hero */
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.listing-hero h1 {
+  font-size: 44px;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.listing-hero p {
+  font-size: 18px;
+  color: var(--text-medium);
+  margin-bottom: 30px;
+}
+
+.listing-search-filter {
+  display: flex;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center;
+}
+
+.listing-search-filter input[type="text"],
+.listing-search-filter select {
+  flex: 1; /* Allows them to grow */
+  min-width: 200px; /* Minimum width for inputs/selects */
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.listing-search-filter input[type="text"]:focus,
+.listing-search-filter select:focus {
+  border-color: var(--primary-blue);
+}
+
+.listing-search-filter .btn {
+  padding-left: 30px; /* Add some padding for icon if any */
+  padding-right: 30px;
+}
+
+
+.expert-results-section h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+}
+
+.experts-grid-listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.expert-card-link {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+}
+
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: var(--text-medium);
+  padding: 50px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .listing-hero {
+    padding: 30px 20px;
+  }
+  .listing-hero h1 {
+    font-size: 34px;
+  }
+  .listing-hero p {
+    font-size: 16px;
+  }
+  .listing-search-filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .listing-search-filter input[type="text"],
+  .listing-search-filter select,
+  .listing-search-filter .btn {
+    width: 100%;
+    min-width: unset;
+  }
+  .expert-results-section h2 {
+    font-size: 28px;
+  }
+  .experts-grid-listing {
+    grid-template-columns: 1fr;
+  }
+}

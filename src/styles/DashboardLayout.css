@@ -1,0 +1,339 @@
+/* src/styles/DashboardLayout.css */
+
+.dashboard-layout {
+  display: flex;
+  flex-direction: column; /* Stack topbar over main content */
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  background-color: #f0f2f5; /* Light grey background for the whole dashboard */
+}
+
+/* --- Dashboard Top Bar --- */
+.dashboard-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky; /* Make it stick to the top */
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between elements */
+}
+
+.user-email {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.expert-dashboard-link a {
+  display: flex;
+  align-items: center;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+
+.expert-dashboard-link .icon {
+  margin-right: 5px;
+}
+
+.expert-dashboard-link .arrow {
+  margin-left: 5px;
+  font-size: 0.8em;
+  transform: rotate(90deg); /* Down arrow */
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.greeting {
+  font-weight: 500;
+  color: #333;
+}
+
+.share-impact-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.share-impact-btn:hover {
+  background-color: #0056b3;
+}
+
+.topmate-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.topmate-link .arrow {
+  font-size: 0.7em;
+  line-height: 1; /* For better vertical alignment */
+}
+
+.topbar-profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+
+/* --- Dashboard Main Content (Sidebar + Page Content) --- */
+.dashboard-main-content {
+  display: flex;
+  flex: 1; /* Allow it to grow and fill available space */
+}
+
+/* --- Sidebar --- */
+.dashboard-sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky; /* Make it stick to the top */
+  top: 60px; /* Adjust based on your topbar height */
+  height: calc(100vh - 60px); /* Fill remaining height */
+  overflow-y: auto; /* Enable scrolling for sidebar content */
+  z-index: 999; /* Below topbar */
+}
+
+.sidebar-logo {
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.sidebar-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.publish-button {
+  background-color: #ff4500; /* Orange color from image */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+}
+
+.publish-button:hover {
+  background-color: #cc3700;
+}
+
+.publish-button .badge.new {
+  background-color: #28a745; /* Green for 'New' */
+  color: white;
+  font-size: 0.7em;
+  padding: 3px 7px;
+  border-radius: 10px;
+  margin-left: 5px;
+  font-weight: normal;
+}
+
+.sidebar-nav {
+  width: 100%;
+  flex-grow: 1; /* Allow nav to take available vertical space */
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 5px;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  position: relative; /* For 'New' badge positioning */
+}
+
+.sidebar-nav a:hover {
+  background-color: #f0f2f5;
+  color: #007bff;
+}
+
+.sidebar-nav li.active a {
+  background-color: #e6f0ff; /* Light blue for active */
+  color: #007bff;
+  font-weight: 600;
+}
+
+.sidebar-nav .icon {
+  font-size: 1.2em; /* Adjust icon size */
+}
+
+.sidebar-nav .badge.new {
+  background-color: #ff4500; /* Orange for 'New' badge on menu items */
+  color: white;
+  font-size: 0.65em;
+  padding: 2px 6px;
+  border-radius: 8px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: normal;
+}
+
+.sidebar-footer {
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.edit-button {
+  background-color: #f0f2f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  width: 100%; /* Make it full width of sidebar footer padding */
+}
+
+.edit-button:hover {
+  background-color: #e0e2e5;
+  border-color: #bbb;
+}
+
+/* Floating "Enhance Profile" button */
+.profile-enhance-button {
+  position: relative; /* For positioning the float button */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Space from edit button */
+}
+
+.enhance-profile-float {
+  background-color: #6a0dad; /* Purple color from image */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative; /* For notification dot */
+}
+
+.enhance-profile-float:hover {
+  background-color: #5a099a;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.notification-dot {
+  background-color: red;
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  line-height: 1; /* For better vertical alignment */
+}
+
+
+/* --- Page Content Area (where actual dashboard content goes) --- */
+.dashboard-page-content {
+  flex: 1; /* Allow it to take all remaining space */
+  padding: 30px;
+  background-color: #f9f9f9; /* Lighter background for the content area */
+  overflow-y: auto; /* Enable scrolling for content within this area */
+}
+
+/* Basic responsiveness for smaller screens (adjust as needed) */
+@media (max-width: 992px) {
+  .dashboard-sidebar {
+    width: 200px; /* Slightly smaller sidebar on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-main-content {
+    flex-direction: column; /* Stack sidebar and content on small screens */
+  }
+
+  .dashboard-sidebar {
+    width: 100%; /* Full width sidebar */
+    height: auto; /* Auto height on small screens */
+    position: static; /* Remove sticky positioning */
+    box-shadow: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .dashboard-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .topbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .share-impact-btn, .topmate-link {
+    width: 100%; /* Make buttons/links full width in stacked layout */
+    text-align: center;
+    justify-content: center;
+  }
+}
